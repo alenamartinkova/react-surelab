@@ -58,7 +58,7 @@ function Header() {
                     
                             <a
                             href="/"
-                            title="Figma"
+                            title="React"
                             style={{
                                 textDecoration: "none",
                                 display: "flex"
