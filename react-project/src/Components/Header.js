@@ -9,19 +9,28 @@ import {
 } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-    linkText: {
-      fontWeight: "bold",
-      marginRight: 15,
+    container: {
+      backgroundColor: "black"
     },
     link: {
-      color: "unset",
+      color: "unset",      
+      marginRight: 15,
       textDecoration: "none",
       "&:hover": {
         textDecoration: "underline",
       },
     },
-    bold: {
-      fontWeight: "bold",
+    linkText: {
+      color: "unset",      
+      marginRight: 15,
+      textDecoration: "none",
+      "&:hover": {
+        textDecoration: "underline",
+      },
+    },
+    button: { 
+      borderRadius: 20,
+      color: "white"
     },
     logo: {
       height: 45,
@@ -42,7 +51,7 @@ function Header() {
     // LINKS NOT WORKING
   return (
     <>
-        <AppBar position="fixed">
+        <AppBar position="fixed" className={classes.container}>
             <Container disableGutters>
                 <Grid container>
                     <Grid item xs={8} sm={6}>
@@ -67,8 +76,8 @@ function Header() {
                                 component="span"
                                 >
                                     
-                                        <a href="/" title={"O nás"}>
-                                            O nás
+                                        <a className={classes.link} href="/" title={"O nás"}>
+                                            O NÁS
                                         </a>
                                     
                                 </Typography>
@@ -77,8 +86,8 @@ function Header() {
                                 component="span"
                                 >
                                 
-                                        <a href="/" title={"Jak to funguje"}>
-                                        Jak to funguje
+                                        <a className={classes.linkText} href="/" title={"Jak to funguje"}>
+                                        JAK TO FUNGUJE
                                         </a>
                                     
                                 </Typography>
@@ -87,26 +96,25 @@ function Header() {
                                 component="span"
                                 >
                                     
-                                        <a href="/" title={"Kontakt"}>
-                                        Kontakt
+                                        <a className={classes.linkText} href="/" title={"Kontakt"}>
+                                        KONTAKT
                                         </a>
                                     
                                 </Typography>
                             </Box>
                             <Box mr={1}>
                                 <Button
-                                    variant="outlined"
-                                    className={classes.bold}
+                                    variant="contained" color="primary"
+                                    className={classes.button}
                                 >
-                                    Přihlásit se
+                                    PŘIHLÁSIT SE
                                 </Button>
                             </Box>
                             <Box mr={1}>
                                 <Button
-                                    variant="outlined"
-                                    className={classes.bold}
+                                    variant="outlined" className={classes.button}
                                 >
-                                    Registrovat
+                                    REGISTROVAT
                                 </Button>
                             </Box>
                         </Box>
