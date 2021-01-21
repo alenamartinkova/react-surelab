@@ -8,6 +8,8 @@ import {
     Button
 } from "@material-ui/core";
 
+import { Link } from 'react-router-dom';
+
 const useStyles = makeStyles((theme) => ({
     container: {
       backgroundColor: "black"
@@ -48,25 +50,23 @@ const useStyles = makeStyles((theme) => ({
 function Header() {
     const classes = useStyles();
 
-    // LINKS NOT WORKING
+  // LINKS NOT WORKING
   return (
     <>
         <AppBar position="fixed" className={classes.container}>
             <Container disableGutters>
                 <Grid container>
                     <Grid item xs={8} sm={6}>
-                    
-                            <a
-                            href="/"
-                            title="React"
-                            style={{
-                                textDecoration: "none",
-                                display: "flex"
-                            }}
-                            >
-                                <img src="./images/logo.png" className={classes.logo} alt="Logo"/>
-                            </a>
-                        
+                      <a
+                      href="/"
+                      title="React"
+                      style={{
+                          textDecoration: "none",
+                          display: "flex"
+                      }}
+                      >
+                          <img src="./images/logo.png" className={classes.logo} alt="Logo"/>
+                      </a>
                     </Grid>
                     <Grid item xs={4} sm={6}>
                         <Box display="flex" justifyContent="flex-end" height="100%">
@@ -75,31 +75,26 @@ function Header() {
                                 variant="body2"
                                 component="span"
                                 >
-                                    
-                                        <a className={classes.link} href="/" title={"O nás"}>
-                                            O NÁS
-                                        </a>
-                                    
+                                  <Link> <a className={classes.link} href="/" title={"O nás"}>
+                                      O NÁS
+                                  </a></Link>
+                                 
                                 </Typography>
                                 <Typography
                                 variant="body2"
                                 component="span"
                                 >
-                                
-                                        <a className={classes.linkText} href="/" title={"Jak to funguje"}>
-                                        JAK TO FUNGUJE
-                                        </a>
-                                    
+                                  <a className={classes.linkText} href="/" title={"Jak to funguje"}>
+                                  JAK TO FUNGUJE
+                                  </a>
                                 </Typography>
                                 <Typography
                                 variant="body2"
                                 component="span"
                                 >
-                                    
-                                        <a className={classes.linkText} href="/" title={"Kontakt"}>
-                                        KONTAKT
-                                        </a>
-                                    
+                                  <a className={classes.linkText} href="/" title={"Kontakt"}>
+                                  KONTAKT
+                                  </a>
                                 </Typography>
                             </Box>
                             <Box mr={1}>
