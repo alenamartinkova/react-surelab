@@ -36,7 +36,7 @@ function AboutUs() {
   const classes = useStyles();
 
   return (
-    <Box position="relative" className={classes.container}>
+    <Box id="aboutUs" position="relative" className={classes.container}>
       <Container className={classes.wrapper}>
         <Box width="100%" textAlign="center" marginBottom="60px">
           <Box>

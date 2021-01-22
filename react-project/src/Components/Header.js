@@ -52,7 +52,7 @@ function Header() {
             <Grid item xs={4} sm={7}>
               <Box display="flex" justifyContent="flex-end" height="100%">
                 <Box display="flex" alignItems="center" mr={3}>
-                  <Link to="/" className={classes.linkText}>
+                  <a href="#aboutUs" className={classes.linkText}>
                     <Typography
                       color="textPrimary"
                       variant="body1"
@@ -61,7 +61,7 @@ function Header() {
                     >
                       O NÁS
                     </Typography>
-                  </Link>
+                  </a>
                   <Link to="/" className={classes.linkText}>
                     <Typography
                       variant="body1"
