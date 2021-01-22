@@ -25,6 +25,10 @@ const theme = createMuiTheme({
     body2: {
       margin: "0px 20px",
     },
+    caption: {
+      fontFamily: "Montserrat",
+      marginBottom: "5px",
+    },
   },
   overrides: {
     MuiAppBar: {
