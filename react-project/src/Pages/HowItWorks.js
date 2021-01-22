@@ -1,5 +1,13 @@
+import HowItWorksMain from "../Components/HowItWorksMain";
+import Plan from "../Components/Plan";
+
 function HowItWorks() {
-  return <>zde</>;
+  return (
+    <>
+      <HowItWorksMain />
+      <Plan />
+    </>
+  );
 }
 
 export default HowItWorks;
