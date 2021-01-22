@@ -39,7 +39,7 @@ const theme = createMuiTheme({
     MuiButton: {
       root: {
         borderRadius: 55,
-        padding: "11px 25px",
+        padding: "10px 25px",
       },
       containedPrimary: {
         color: "white",
@@ -47,7 +47,7 @@ const theme = createMuiTheme({
       outlined: {
         color: "white",
         borderRadius: 55,
-        padding: "11px 22px",
+        padding: "10px 22px",
         border: "1px solid white",
       },
       outlinedSecondary: {
