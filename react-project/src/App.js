@@ -2,6 +2,7 @@ import Header from "./Components/Header";
 import MainPreview from "./Components/MainPreview";
 import AboutUs from "./Components/AboutUs";
 import PartnersPreview from "./Components/PartnersPreview";
+import Differences from "./Components/Differences";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./theme.js";
@@ -14,6 +15,7 @@ function App() {
         <MainPreview />
         <AboutUs />
         <PartnersPreview />
+        <Differences />
       </BrowserRouter>
     </ThemeProvider>
   );

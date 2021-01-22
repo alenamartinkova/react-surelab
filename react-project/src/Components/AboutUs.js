@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
   container: {
     background:
       "linear-gradient(143.19deg, rgba(195, 131, 139, 0.13) 40.79%, rgba(46, 164, 197, 0.5) 104.98%)",
-    maxHeight: "100vh",
   },
   wrapper: {
     padding: "95px",
@@ -25,6 +24,12 @@ const useStyles = makeStyles((theme) => ({
   },
   marginBottom: { marginBottom: "30px" },
   marginBottom90: { marginBottom: "90px" },
+  imgWidth: {
+    width: "100%",
+  },
+  padding: {
+    paddingRight: "25px",
+  },
 }));
 
 function AboutUs() {
@@ -54,10 +59,14 @@ function AboutUs() {
           justify="​center"
           className={classes.marginBottom90}
         >
-          <Grid item xs={6}>
-            <img src="./images/zhang-kenny.png" alt="zhang" />
+          <Grid item md={6} sm={12} className={classes.padding}>
+            <img
+              className={classes.imgWidth}
+              src="./images/zhang-kenny.png"
+              alt="zhang"
+            />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item md={6} sm={12}>
             <Typography component="p" className={classes.marginBottom}>
               Znáš to: skládáš hudbu, posíláš songy do médií a na streamovací
               servery, hraješ na koncertech.{" "}

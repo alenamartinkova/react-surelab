@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 40,
     textDecoration: "none",
     "&:hover": {
-      textDecoration: "underline",
+      textDecoration: "none",
     },
   },
   logo: {
