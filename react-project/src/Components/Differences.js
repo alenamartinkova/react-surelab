@@ -64,7 +64,7 @@ function Differences() {
           </Box>
           <Box className={classes.maxWidth}>
             <Typography variant="h5" component="span">
-              Čím se lišíme od "starých" labaleů?
+              Čím se lišíme od "starých" labelů?
             </Typography>
           </Box>
         </Box>
