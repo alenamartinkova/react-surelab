@@ -1,6 +1,7 @@
 import AdvantagesButtons from "../Components/AdvantagesButtons";
 import HowItWorksMain from "../Components/HowItWorksMain";
 import Plan from "../Components/Plan";
+import YourSongsYourRights from "../Components/YourSongsYourRights";
 
 function HowItWorks() {
   return (
@@ -8,6 +9,7 @@ function HowItWorks() {
       <HowItWorksMain />
       <Plan />
       <AdvantagesButtons />
+      <YourSongsYourRights />
     </>
   );
 }
