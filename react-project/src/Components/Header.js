@@ -34,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Header() {
   const classes = useStyles();
-  const theme = useTheme();
 
   return (
     <>
