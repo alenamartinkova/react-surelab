@@ -1,24 +1,27 @@
 import Header from "./Components/Header";
-import MainPreview from "./Components/MainPreview";
-import AboutUs from "./Components/AboutUs";
-import PartnersPreview from "./Components/PartnersPreview";
-import Differences from "./Components/Differences";
 import Footer from "./Components/Footer";
-import { BrowserRouter } from "react-router-dom";
+import Home from "./Pages/Home";
+import HowItWorks from "./Pages/HowItWorks";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./theme.js";
+import { createBrowserHistory } from "history";
 
 function App() {
+  const history = createBrowserHistory();
+
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
+      <Router history={history}>
         <Header />
-        <MainPreview />
-        <AboutUs />
-        <PartnersPreview />
-        <Differences />
+        <Switch>
+          <Route path="/" exact component={Home} />
+        </Switch>
+        <Switch>
+          <Route path="/jak-to-funguje" exact component={HowItWorks} />
+        </Switch>
         <Footer />
-      </BrowserRouter>
+      </Router>
     </ThemeProvider>
   );
 }

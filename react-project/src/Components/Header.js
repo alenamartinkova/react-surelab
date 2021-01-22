@@ -62,7 +62,7 @@ function Header() {
                       O NÁS
                     </Typography>
                   </a>
-                  <Link to="/" className={classes.linkText}>
+                  <Link to="/jak-to-funguje" className={classes.linkText}>
                     <Typography
                       variant="body1"
                       color="textPrimary"
