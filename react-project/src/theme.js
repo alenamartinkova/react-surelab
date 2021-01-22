@@ -22,6 +22,9 @@ const theme = createMuiTheme({
       letterSpacing: "-0.015em",
       fontWeight: 500,
     },
+    body2: {
+      margin: "0px 20px",
+    },
   },
   overrides: {
     MuiAppBar: {
@@ -32,7 +35,7 @@ const theme = createMuiTheme({
     MuiButton: {
       root: {
         borderRadius: 55,
-        padding: "11px 22px",
+        padding: "11px 25px",
       },
       containedPrimary: {
         color: "white",
@@ -42,6 +45,12 @@ const theme = createMuiTheme({
         borderRadius: 55,
         padding: "11px 22px",
         border: "1px solid white",
+      },
+      outlinedSecondary: {
+        color: "black",
+        borderRadius: 55,
+        padding: "10px 40px",
+        border: "1px solid black",
       },
     },
   },
