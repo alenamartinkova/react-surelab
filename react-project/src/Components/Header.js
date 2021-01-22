@@ -1,122 +1,100 @@
 import {
-    AppBar,
-    Box,
-    Container,
-    Grid,
-    Typography,
-    makeStyles,
-    Button
+  AppBar,
+  Box,
+  Container,
+  Grid,
+  Typography,
+  makeStyles,
+  Button,
 } from "@material-ui/core";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-    container: {
-      backgroundColor: "black"
+  container: {
+    padding: `${theme.spacing(2)}px 0`,
+  },
+  linkText: {
+    color: "unset",
+    marginRight: 40,
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "underline",
     },
-    link: {
-      color: "unset",      
-      marginRight: 15,
-      textDecoration: "none",
-      "&:hover": {
-        textDecoration: "underline",
-      },
-    },
-    linkText: {
-      color: "unset",      
-      marginRight: 15,
-      textDecoration: "none",
-      "&:hover": {
-        textDecoration: "underline",
-      },
-    },
-    button: { 
-      borderRadius: 20,
-      color: "white"
-    },
-    logo: {
-      height: 45,
-      display: "flex",
-    },
-    hideSelectIcon: {
-      display: "none",
-    },
-    select: {
-      background: "none",
-      paddingRight: "10px !important",
-    },
-  }));
+  },
+  logo: {
+    height: 45,
+    display: "flex",
+  },
+  bold: {
+    fontWeight: "bold",
+  },
+}));
 
 function Header() {
-    const classes = useStyles();
+  const classes = useStyles();
+  const theme = useTheme();
 
-  // LINKS NOT WORKING
   return (
     <>
-        <AppBar position="fixed" className={classes.container}>
-            <Container disableGutters>
-                <Grid container>
-                    <Grid item xs={8} sm={6}>
-                      <a
-                      href="/"
-                      title="React"
-                      style={{
-                          textDecoration: "none",
-                          display: "flex"
-                      }}
-                      >
-                          <img src="./images/logo.png" className={classes.logo} alt="Logo"/>
-                      </a>
-                    </Grid>
-                    <Grid item xs={4} sm={6}>
-                        <Box display="flex" justifyContent="flex-end" height="100%">
-                            <Box display="flex" alignItems="center" mr={3}>
-                                <Typography
-                                variant="body2"
-                                component="span"
-                                >
-                                  <Link> <a className={classes.link} href="/" title={"O nás"}>
-                                      O NÁS
-                                  </a></Link>
-                                 
-                                </Typography>
-                                <Typography
-                                variant="body2"
-                                component="span"
-                                >
-                                  <a className={classes.linkText} href="/" title={"Jak to funguje"}>
-                                  JAK TO FUNGUJE
-                                  </a>
-                                </Typography>
-                                <Typography
-                                variant="body2"
-                                component="span"
-                                >
-                                  <a className={classes.linkText} href="/" title={"Kontakt"}>
-                                  KONTAKT
-                                  </a>
-                                </Typography>
-                            </Box>
-                            <Box mr={1}>
-                                <Button
-                                    variant="contained" color="primary"
-                                    className={classes.button}
-                                >
-                                    PŘIHLÁSIT SE
-                                </Button>
-                            </Box>
-                            <Box mr={1}>
-                                <Button
-                                    variant="outlined" className={classes.button}
-                                >
-                                    REGISTROVAT
-                                </Button>
-                            </Box>
-                        </Box>
-                    </Grid>
-                </Grid>
-            </Container>
-        </AppBar>
+      <AppBar position="fixed" className={classes.container}>
+        <Container disableGutters>
+          <Grid container>
+            <Grid item xs={8} sm={5}>
+              <Link to="/">
+                <img
+                  src="./images/logo.png"
+                  className={classes.logo}
+                  alt="Logo"
+                />
+              </Link>
+            </Grid>
+            <Grid item xs={4} sm={7}>
+              <Box display="flex" justifyContent="flex-end" height="100%">
+                <Box display="flex" alignItems="center" mr={3}>
+                  <Link to="/" className={classes.linkText}>
+                    <Typography
+                      color="textPrimary"
+                      variant="body1"
+                      component="span"
+                      className={classes.bold}
+                    >
+                      O NÁS
+                    </Typography>
+                  </Link>
+                  <Link to="/" className={classes.linkText}>
+                    <Typography
+                      variant="body1"
+                      color="textPrimary"
+                      component="span"
+                    >
+                      JAK TO FUNGUJE
+                    </Typography>
+                  </Link>
+                  <Link to="/" className={classes.linkText}>
+                    <Typography
+                      color="textPrimary"
+                      variant="body1"
+                      component="span"
+                    >
+                      KONTAKT
+                    </Typography>
+                  </Link>
+                </Box>
+                <Box mr={1}>
+                  <Button variant="contained" color="primary">
+                    PŘIHLÁSIT SE
+                  </Button>
+                </Box>
+                <Box mr={1}>
+                  <Button variant="outlined">REGISTROVAT</Button>
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+      </AppBar>
     </>
   );
 }
