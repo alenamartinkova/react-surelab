@@ -1,4 +1,11 @@
-import { Box, makeStyles, Typography, Grid, Button } from "@material-ui/core";
+import {
+  Box,
+  makeStyles,
+  Typography,
+  Grid,
+  Button,
+  Container,
+} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -8,8 +15,6 @@ const useStyles = makeStyles((theme) => ({
   },
   wrapper: {
     padding: "95px",
-    margin: "0 auto",
-    maxWidth: "1440px",
   },
   maxWidth: {
     maxWidth: "690px",
@@ -27,7 +32,7 @@ function AboutUs() {
 
   return (
     <Box position="relative" className={classes.container}>
-      <Box className={classes.wrapper}>
+      <Container className={classes.wrapper}>
         <Box width="100%" textAlign="center" marginBottom="60px">
           <Box>
             <Typography color="primary" variant="h6" component="span">
@@ -105,7 +110,7 @@ function AboutUs() {
             REGISTROVAT SE
           </Button>
         </Box>
-      </Box>
+      </Container>
     </Box>
   );
 }
