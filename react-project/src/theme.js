@@ -13,6 +13,16 @@ const theme = createMuiTheme({
       secondary: "#000000",
     },
   },
+  typography: {
+    fontFamily: "Work Sans",
+
+    h5: {
+      fontSize: "26px",
+      lineHeight: "35px",
+      letterSpacing: "-0.015em",
+      fontWeight: 500,
+    },
+  },
   overrides: {
     MuiAppBar: {
       colorPrimary: {

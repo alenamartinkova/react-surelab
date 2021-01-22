@@ -37,7 +37,7 @@ function Header() {
 
   return (
     <>
-      <AppBar position="fixed" className={classes.container}>
+      <AppBar position="absolute" className={classes.container}>
         <Container disableGutters>
           <Grid container>
             <Grid item xs={8} sm={5}>

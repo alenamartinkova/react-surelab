@@ -1,9 +1,6 @@
-import { Box, Typography, makeStyles, Container } from "@material-ui/core";
+import { Box, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    padding: `${theme.spacing(2)}px 0`,
-  },
   preview1: {
     backgroundSize: "cover",
     backgroundPosition: "center",
