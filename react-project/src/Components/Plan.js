@@ -3,8 +3,12 @@ import {
   makeStyles,
   Typography,
   Grid,
+  Hidden,
   Container,
+  useMediaQuery,
 } from "@material-ui/core";
+
+import { useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -41,10 +45,22 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "350px",
     margin: "0 auto",
   },
+  image: {
+    maxWidth: 22,
+  },
+  imageSmaller: {
+    maxWidth: 15,
+  },
+  marginY: {
+    margin: "30px auto",
+  },
 }));
 
 function Plan() {
+  const theme = useTheme();
   const classes = useStyles();
+  const mobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Box className={classes.container}>
       <Container className={classes.wrapper}>
@@ -68,32 +84,50 @@ function Plan() {
           </Typography>
         </Box>
         <Box margin="10px 0">
-          <Grid container>
-            <Grid item xs={12} md={4} className={classes.flex}>
-              <Box className={classes.circleIcon} ml="auto">
-                <img src="./images/key.svg" alt="key" />
-              </Box>
-              <Box className={classes.line} />
+          <Hidden smDown>
+            <Grid container>
+              <Grid item xs={12} md={4} className={classes.flex}>
+                <Box className={classes.circleIcon} ml="auto">
+                  <img
+                    src="./images/key.svg"
+                    alt="key"
+                    className={classes.image}
+                  />
+                </Box>
+                <Box className={classes.line} />
+              </Grid>
+              <Grid item xs={12} md={4} className={classes.flex}>
+                <Box className={classes.line} />
+                <Box className={classes.circleIcon}>
+                  <img
+                    src="./images/monitoring.svg"
+                    alt="monitoring"
+                    className={classes.image}
+                  />
+                </Box>
+                <Box className={classes.line} />
+              </Grid>
+              <Grid item xs={12} md={4} className={classes.flex}>
+                <Box className={classes.line} />
+                <Box className={classes.circleIcon} mr="auto">
+                  <img
+                    src="./images/money.svg"
+                    alt="money"
+                    className={classes.imageSmaller}
+                  />
+                </Box>
+              </Grid>
             </Grid>
-            <Grid item xs={12} md={4} className={classes.flex}>
-              <Box className={classes.line} />
-              <Box className={classes.circleIcon}>
-                <img src="./images/monitoring.svg" alt="monitoring" />
-              </Box>
-              <Box className={classes.line} />
-            </Grid>
-            <Grid item xs={12} md={4} className={classes.flex}>
-              <Box className={classes.line} />
-              <Box className={classes.circleIcon} mr="auto">
-                <img src="./images/money.svg" alt="money" />
-              </Box>
-            </Grid>
-          </Grid>
+          </Hidden>
         </Box>
         <Box margin="10px 0">
           <Grid container>
             <Grid item xs={12} md={4} className={classes.flex}>
-              <Box className={classes.box}>
+              <Box
+                className={`${mobile ? classes.marginY : undefined} ${
+                  classes.box
+                }`}
+              >
                 <Typography variant="h5" component="h5">
                   Promluvíme si spolu
                 </Typography>
@@ -105,7 +139,11 @@ function Plan() {
               </Box>
             </Grid>
             <Grid item xs={12} md={4} className={classes.flex}>
-              <Box className={classes.box}>
+              <Box
+                className={`${mobile ? classes.marginY : undefined} ${
+                  classes.box
+                }`}
+              >
                 <Typography variant="h5" component="h5">
                   Promluvíme si spolu
                 </Typography>
@@ -116,7 +154,11 @@ function Plan() {
               </Box>
             </Grid>
             <Grid item xs={12} md={4} className={classes.flex}>
-              <Box className={classes.box}>
+              <Box
+                className={`${mobile ? classes.marginY : undefined} ${
+                  classes.box
+                }`}
+              >
                 <Typography variant="h5" component="h5">
                   Plusové čísla
                 </Typography>

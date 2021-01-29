@@ -6,7 +6,6 @@ import { useContactContext } from "../Contexts/ContactContext";
 const useStyles = makeStyles({
   linkText: {
     fontWeight: "bold",
-    marginRight: 15,
   },
   link: {
     color: "white",
@@ -60,20 +59,14 @@ const MobileMenu = ({ onClose }) => {
         </Box>
         <Box mt={5} display="flex" justifyContent="center">
           <Typography
-            className={classes.linkText}
+            className={`${classes.linkText} ${classes.link}`}
             align="center"
-            onClick={onClose}
+            onClick={() => {
+              onClose();
+              setOpen(true);
+            }}
           >
-            <Link
-              to="/jak-to-funguje"
-              className={classes.link}
-              onClick={() => {
-                onClose();
-                setOpen(true);
-              }}
-            >
-              KONTAKT
-            </Link>
+            KONTAKT
           </Typography>
         </Box>
         <Box mt={5} display="flex" justifyContent="center">

@@ -31,7 +31,7 @@ function YourSongsYourRights() {
   return (
     <Box className={classes.container}>
       <Container className={classes.wrapper}>
-        <Box display="flex">
+        <Box display="flex" overflow="scroll">
           <Box className={classes.imageBox}>
             <img src="./images/singer-1.png" alt="singer-1" />
           </Box>

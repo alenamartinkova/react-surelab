@@ -28,25 +28,13 @@ function AdvantagesButtons() {
       <Container className={classes.wrapper}>
         <Grid container>
           <Grid item xs={12} sm={6} className={classes.textAlign}>
-            <Button
-              variant="contained"
-              color="textPrimary"
-              className={classes.button}
-            >
+            <Button variant="contained" className={classes.button}>
               Pohlídáme ti tvůj dosah
             </Button>
-            <Button
-              variant="contained"
-              color="textPrimary"
-              className={classes.button}
-            >
+            <Button variant="contained" className={classes.button}>
               Postaráme se o administrativu
             </Button>
-            <Button
-              variant="contained"
-              color="textPrimary"
-              className={classes.button}
-            >
+            <Button variant="contained" className={classes.button}>
               Přineseme ti profit
             </Button>
           </Grid>

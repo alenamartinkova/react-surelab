@@ -56,7 +56,6 @@ function AboutUs() {
           spacing={0}
           direction="row"
           alignItems="center"
-          justify="​center"
           className={classes.marginBottom90}
         >
           <Grid item md={6} sm={12} className={classes.padding}>

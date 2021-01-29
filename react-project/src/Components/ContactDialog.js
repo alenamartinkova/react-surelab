@@ -26,6 +26,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       maxWidth: "calc(100% - 64px)",
       padding: `${theme.spacing(0)}px ${theme.spacing(20)}px`,
+      overflowX: "hidden",
+    },
+    [theme.breakpoints.down("sm")]: {
+      padding: `${theme.spacing(0)}px ${theme.spacing(6)}px`,
     },
   },
   bold: {
@@ -75,13 +79,17 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     margin: "10px auto 30px",
   },
+  center: {
+    textAlign: "center",
+    marginBottom: 30,
+  },
 }));
 
 const ContactDialog = ({}) => {
   const classes = useStyles();
   const { open, setOpen } = useContactContext();
   const theme = useTheme();
-  const mobile = useMediaQuery(theme.breakpoints.down("xs"));
+  const mobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const [step, setStep] = useState(1);
   const [showValidation, setShowValidation] = useState(false);
@@ -124,6 +132,8 @@ const ContactDialog = ({}) => {
       open={open}
       onClose={handleClose}
       PaperProps={{ className: classes.dialog }}
+      fullScreen={mobile}
+      fullWidth={mobile}
     >
       {mobile && (
         <Box position="absolute" right={20} top={15} onClick={handleClose}>
@@ -256,7 +266,14 @@ const ContactDialog = ({}) => {
               </Box>
               <Box>
                 <Grid container>
-                  <Grid item xs={12} sm={6} className={classes.flex}>
+                  <Grid
+                    item
+                    xs={12}
+                    md={6}
+                    className={` ${mobile ? classes.center : undefined} ${
+                      classes.flex
+                    }`}
+                  >
                     <Box>
                       <img src="./images/logo-form.png" height="50" />
                     </Box>
@@ -271,8 +288,12 @@ const ContactDialog = ({}) => {
                       </Typography>
                     </Box>
                   </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <Box display="flex" pl={3}>
+                  <Grid item xs={12} md={6}>
+                    <Box
+                      display="flex"
+                      pl={mobile ? 0 : 3}
+                      justifyContent={`${mobile ? "center" : undefined}`}
+                    >
                       <Box display="flex">
                         <RoomIcon className={classes.iconColor} />
                         <Typography color="secondary">
@@ -281,7 +302,11 @@ const ContactDialog = ({}) => {
                       </Box>
                     </Box>
 
-                    <Box display="flex" pl={3}>
+                    <Box
+                      display="flex"
+                      pl={mobile ? 0 : 3}
+                      justifyContent={`${mobile ? "center" : undefined}`}
+                    >
                       <Box my={4} display="flex">
                         <PhoneIcon className={classes.iconColor} />
                         <Typography color="secondary">
@@ -295,7 +320,11 @@ const ContactDialog = ({}) => {
                         </Typography>
                       </Box>
                     </Box>
-                    <Box display="flex" pl={3}>
+                    <Box
+                      display="flex"
+                      pl={mobile ? 0 : 3}
+                      justifyContent={`${mobile ? "center" : undefined}`}
+                    >
                       <Box display="flex">
                         <MailOutlineIcon className={classes.iconColor} />
                         <Typography color="secondary">
