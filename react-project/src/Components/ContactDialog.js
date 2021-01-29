@@ -8,6 +8,7 @@ import {
   Typography,
   makeStyles,
   useMediaQuery,
+  Button,
 } from "@material-ui/core";
 import { useTheme } from "@material-ui/core/styles";
 import {
@@ -65,6 +66,10 @@ const useStyles = makeStyles((theme) => ({
   iconColor: {
     color: "#cacaca",
     marginRight: "10px",
+  },
+  button: {
+    borderRadius: 0,
+    padding: "10px 30px",
   },
 }));
 
@@ -235,6 +240,14 @@ const ContactDialog = ({}) => {
                     />
                   </Grid>
                 </Grid>
+                <Box display="flex" justifyContent="flex-end">
+                  <Button
+                    variant="outlinedSecondary"
+                    className={classes.button}
+                  >
+                    Poslat
+                  </Button>
+                </Box>
               </Box>
               <Box>
                 <Grid container>
