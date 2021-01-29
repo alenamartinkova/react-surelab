@@ -6,22 +6,25 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./theme.js";
 import { createBrowserHistory } from "history";
+import { ContactContextProvider } from "./Contexts/ContactContext";
 
 function App() {
   const history = createBrowserHistory();
 
   return (
     <ThemeProvider theme={theme}>
-      <Router history={history}>
-        <Header />
-        <Switch>
-          <Route path="/" exact component={Home} />
-        </Switch>
-        <Switch>
-          <Route path="/jak-to-funguje" exact component={HowItWorks} />
-        </Switch>
-        <Footer />
-      </Router>
+      <ContactContextProvider>
+        <Router history={history}>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={Home} />
+          </Switch>
+          <Switch>
+            <Route path="/jak-to-funguje" exact component={HowItWorks} />
+          </Switch>
+          <Footer />
+        </Router>
+      </ContactContextProvider>
     </ThemeProvider>
   );
 }

@@ -9,14 +9,14 @@ import {
 } from "@material-ui/core";
 
 import { Link } from "react-router-dom";
-import { useTheme } from "@material-ui/core/styles";
+import { useContactContext } from "../Contexts/ContactContext";
 
 const useStyles = makeStyles((theme) => ({
   container: {
     padding: `${theme.spacing(2)}px 0`,
   },
   linkText: {
-    color: "unset",
+    color: "white",
     marginRight: 40,
     textDecoration: "none",
     "&:hover": {
@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Header() {
   const classes = useStyles();
+  const { setOpen } = useContactContext();
 
   return (
     <>
@@ -71,15 +72,14 @@ function Header() {
                       JAK TO FUNGUJE
                     </Typography>
                   </Link>
-                  <Link to="/" className={classes.linkText}>
-                    <Typography
-                      color="textPrimary"
-                      variant="body1"
-                      component="span"
-                    >
-                      KONTAKT
-                    </Typography>
-                  </Link>
+                  <Typography
+                    variant="body1"
+                    component="span"
+                    onClick={() => setOpen(true)}
+                    className={classes.linkText}
+                  >
+                    KONTAKT
+                  </Typography>
                 </Box>
                 <Box mr={1}>
                   <Button variant="contained" color="primary">
