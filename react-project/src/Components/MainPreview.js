@@ -12,7 +12,7 @@ function MainPreview() {
   const classes = useStyles();
 
   return (
-    <Box height="100vh" position="relative">
+    <Box height="150vh" position="relative">
       <Box
         position="absolute"
         height="100%"

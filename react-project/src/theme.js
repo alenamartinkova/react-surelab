@@ -74,6 +74,11 @@ const theme = createMuiTheme({
         borderTopRightRadius: 0,
       },
     },
+    MuiSvgIcon: {
+      root: {
+        color: "white",
+      },
+    },
   },
 });
 
