@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import {
   Box,
-  Button,
-  Checkbox,
   Dialog,
   Grid,
   InputLabel,
@@ -13,25 +11,20 @@ import {
 } from "@material-ui/core";
 import { useTheme } from "@material-ui/core/styles";
 import {
-  CheckBoxSharp as CheckBoxSharpIcon,
+  HighlightOff as CloseIcon,
   CheckCircleRounded as CheckCircleRoundedIcon,
   MailOutline as MailOutlineIcon,
   Phone as PhoneIcon,
   Room as RoomIcon,
-  HighlightOff as CloseIcon,
 } from "@material-ui/icons";
 
 import { useContactContext } from "../Contexts/ContactContext";
 
 const useStyles = makeStyles((theme) => ({
   dialog: {
-    padding: `${theme.spacing(3)}px ${theme.spacing(6)}px`,
-    [theme.breakpoints.down("sm")]: {
-      overflowX: "hidden",
-    },
     [theme.breakpoints.up("sm")]: {
       maxWidth: "calc(100% - 64px)",
-      padding: `${theme.spacing(10)}px ${theme.spacing(20)}px`,
+      padding: `${theme.spacing(0)}px ${theme.spacing(20)}px`,
     },
   },
   bold: {
@@ -46,14 +39,6 @@ const useStyles = makeStyles((theme) => ({
   spaceBottom: {
     paddingBottom: 20,
   },
-  customIcon: {
-    fontSize: "1.25rem",
-    width: "1em",
-    height: "1em",
-  },
-  iconColor: {
-    color: "#cacaca",
-  },
   error: {
     boxShadow: "0px 0px 3px 1px rgba(255,0,0,1)",
   },
@@ -61,6 +46,25 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "10rem",
     color: theme.palette.success.main,
     margin: "auto",
+  },
+  link: {
+    color: theme.palette.secondary.main,
+    textDecoration: "none",
+  },
+  marginY: {
+    margin: "auto 0",
+  },
+  flex: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+  },
+  noBorder: {
+    borderRadius: 0,
+  },
+  iconColor: {
+    color: "#cacaca",
+    marginRight: "10px",
   },
 }));
 
@@ -111,26 +115,31 @@ const ContactDialog = ({}) => {
       open={open}
       onClose={handleClose}
       PaperProps={{ className: classes.dialog }}
-      fullScreen={mobile}
-      fullWidth={mobile}
     >
       {mobile && (
         <Box position="absolute" right={20} top={15} onClick={handleClose}>
           <CloseIcon />
         </Box>
       )}
-      <Box marginTop={3} maxWidth={675}>
+      <Box marginTop={8} maxWidth={675}>
         {step === 1 && (
           <>
-            <Typography
-              color="primary"
-              variant="h6"
-              align="center"
-            ></Typography>
-            <Box mt={1}></Box>
+            <Typography color="primary" variant="h6" align="center">
+              Máš otázky? Napiš nám.
+            </Typography>
             <Box marginY={9}>
-              <Typography align="center" className={classes.bold}></Typography>
-              <Typography align="center"></Typography>
+              <Typography
+                align="center"
+                color="secondary"
+                className={classes.bold}
+              >
+                Napiš nám dotaz, či připomínku do formuláře. Ozveme se co
+                nejdříve to půjde.
+              </Typography>
+              <Typography align="center" color="secondary">
+                All the data we collect are subject to the protection of
+                personal data of our website.
+              </Typography>
               <Box marginY={6}>
                 <Grid container>
                   <Grid
@@ -141,15 +150,18 @@ const ContactDialog = ({}) => {
                       classes.spaceBottom
                     }`}
                   >
-                    <InputLabel></InputLabel>
+                    <InputLabel>Jméno</InputLabel>
                     <TextField
-                      variant="outlined"
+                      variant="filled"
                       fullWidth
                       id="name"
                       value={data.name}
                       onChange={(e) => {
                         setShowValidation(false);
                         setData({ ...data, name: e.target.value });
+                      }}
+                      InputProps={{
+                        disableUnderline: true,
                       }}
                       className={
                         showValidation && !data.name ? classes.error : undefined
@@ -164,12 +176,15 @@ const ContactDialog = ({}) => {
                       classes.spaceBottom
                     }`}
                   >
-                    <InputLabel></InputLabel>
+                    <InputLabel>Telefonní číslo</InputLabel>
                     <TextField
-                      variant="outlined"
+                      variant="filled"
                       fullWidth
                       type="tel"
                       value={data.phone}
+                      InputProps={{
+                        disableUnderline: true,
+                      }}
                       onChange={(e) => {
                         setShowValidation(false);
                         setData({ ...data, phone: e.target.value });
@@ -177,12 +192,15 @@ const ContactDialog = ({}) => {
                     />
                   </Grid>
                   <Grid item xs={12} className={classes.spaceBottom}>
-                    <InputLabel></InputLabel>
+                    <InputLabel>Email</InputLabel>
                     <TextField
-                      variant="outlined"
+                      variant="filled"
                       fullWidth
                       type="email"
                       value={data.email}
+                      InputProps={{
+                        disableUnderline: true,
+                      }}
                       onChange={(e) => {
                         setShowValidation(false);
                         setData({ ...data, email: e.target.value });
@@ -195,13 +213,16 @@ const ContactDialog = ({}) => {
                     />
                   </Grid>
                   <Grid item xs={12} className={classes.spaceBottom}>
-                    <InputLabel></InputLabel>
+                    <InputLabel>Tvá zpráva</InputLabel>
                     <TextField
-                      variant="outlined"
+                      variant="filled"
                       fullWidth
                       multiline
                       rows={5}
                       value={data.question}
+                      InputProps={{
+                        disableUnderline: true,
+                      }}
                       onChange={(e) => {
                         setShowValidation(false);
                         setData({ ...data, question: e.target.value });
@@ -213,84 +234,39 @@ const ContactDialog = ({}) => {
                       }
                     />
                   </Grid>
-                  <Grid item xs={12} className={classes.spaceBottom}>
-                    <Box display="flex">
-                      <Box display="block">
-                        <Checkbox
-                          disableRipple
-                          icon={
-                            <svg
-                              className={classes.customIcon}
-                              viewBox="0 0 24 24"
-                              aria-hidden="true"
-                            >
-                              <path d="M21 3H3v18h18V3z" fill="#dedede" />
-                            </svg>
-                          }
-                          checkedIcon={<CheckBoxSharpIcon fontSize="small" />}
-                          checked={data.newsletter}
-                          onChange={(e) => {
-                            setShowValidation(false);
-                            setData({ ...data, newsletter: e.target.checked });
-                          }}
-                        />
-                      </Box>
-                      <Box ml={2} display="flex">
-                        <Typography variant="caption"></Typography>
-                      </Box>
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12}>
-                    <Box display="flex" justifyContent="flex-end">
-                      <Button
-                        variant="outlined"
-                        onClick={handleSubmit}
-                      ></Button>
-                    </Box>
-                  </Grid>
                 </Grid>
               </Box>
-              <Box marginX="-40px">
+              <Box>
                 <Grid container>
-                  <Grid item xs={12} sm={6}>
-                    <Box m={3} display="flex" flexDirection="column">
-                      <img
-                        src="logo.png"
-                        height="50"
-                        style={{ margin: "auto" }}
-                      />
+                  <Grid item xs={12} sm={6} className={classes.flex}>
+                    <Box>
+                      <img src="./images/logo-form.png" height="50" />
+                    </Box>
+
+                    <Box>
+                      <Typography color="secondary" className={classes.bold}>
+                        Kontaktní osoba:
+                      </Typography>
+
+                      <Typography color="secondary">
+                        {"Marek Pavlík & Lucie Přikrylová"}
+                      </Typography>
                     </Box>
                   </Grid>
                   <Grid item xs={12} sm={6}>
-                    <Box display="flex" m={3} pl={3}>
-                      <RoomIcon className={classes.iconColor} />
-                      <Box ml={2}>
-                        <Typography>Ketschenbacher Straße 104a</Typography>
-                        <Typography>96465 Neustadt bei Coburg</Typography>
+                    <Box display="flex" pl={3}>
+                      <Box display="flex">
+                        <RoomIcon className={classes.iconColor} />
+                        <Typography color="secondary">
+                          Kdo ví, Ostrava
+                        </Typography>
                       </Box>
                     </Box>
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <Box m={3}>
-                      <Typography
-                        align="center"
-                        className={classes.bold}
-                      ></Typography>
-                      <Typography align="center">{`Thomas Sesselmann & Konstantin Rupp`}</Typography>
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <Box display="flex" m={3} pl={3}>
-                      <Box
-                        display="flex"
-                        justifyContent="space-between"
-                        flexDirection="column"
-                      >
+
+                    <Box display="flex" pl={3}>
+                      <Box my={4} display="flex">
                         <PhoneIcon className={classes.iconColor} />
-                        <MailOutlineIcon className={classes.iconColor} />
-                      </Box>
-                      <Box ml={2}>
-                        <Typography>
+                        <Typography color="secondary">
                           Tel.:{" "}
                           <a
                             href="tel:09568 / 89687-12"
@@ -299,14 +275,18 @@ const ContactDialog = ({}) => {
                             09568 / 89687-12
                           </a>
                         </Typography>
-                        <Typography>Fax : 09568 / 89687-18</Typography>
-                        <Typography>
+                      </Box>
+                    </Box>
+                    <Box display="flex" pl={3}>
+                      <Box display="flex">
+                        <MailOutlineIcon className={classes.iconColor} />
+                        <Typography color="secondary">
                           E-Mail:{" "}
                           <a
-                            href="mailto:info@dieartwert.de"
+                            href="mailto:info@surelab.cz"
                             className={classes.link}
                           >
-                            info@dieartwert.de
+                            info@surelab.cz
                           </a>
                         </Typography>
                       </Box>

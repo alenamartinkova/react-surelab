@@ -57,6 +57,12 @@ const theme = createMuiTheme({
         border: "1px solid black",
       },
     },
+    MuiInputLabel: {
+      root: {
+        textTransform: "uppercase",
+        fontWeight: 600,
+      },
+    },
   },
 });
 
