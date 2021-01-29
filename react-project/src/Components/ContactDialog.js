@@ -71,6 +71,10 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 0,
     padding: "10px 30px",
   },
+  thankYouText: {
+    fontWeight: "bold",
+    margin: "10px auto 30px",
+  },
 }));
 
 const ContactDialog = ({}) => {
@@ -244,6 +248,7 @@ const ContactDialog = ({}) => {
                   <Button
                     variant="outlinedSecondary"
                     className={classes.button}
+                    onClick={handleSubmit}
                   >
                     Poslat
                   </Button>
@@ -313,7 +318,13 @@ const ContactDialog = ({}) => {
         {step === 2 && (
           <Box display="flex" flexDirection="column">
             <CheckCircleRoundedIcon className={classes.succesCheck} />
-            <Typography variant="h6" className={classes.bold}></Typography>
+            <Typography
+              variant="h6"
+              className={classes.thankYouText}
+              color="textSecondary"
+            >
+              Děkujeme
+            </Typography>
           </Box>
         )}
       </Box>
