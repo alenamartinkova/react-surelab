@@ -63,6 +63,17 @@ const theme = createMuiTheme({
         fontWeight: 600,
       },
     },
+    MuiFilledInput: {
+      input: {
+        padding: 10,
+        color: "black",
+      },
+      root: {
+        marginTop: 5,
+        borderTopLeftRadius: 0,
+        borderTopRightRadius: 0,
+      },
+    },
   },
 });
 
