@@ -86,7 +86,7 @@ function Header() {
               ) : (
                 <Box display="flex" justifyContent="flex-end" height="100%">
                   <Box display="flex" alignItems="center" mr={3}>
-                    <a href="#aboutUs" className={classes.linkText}>
+                    <a href="/#aboutUs" className={classes.linkText}>
                       <Typography
                         color="textPrimary"
                         variant="body1"

@@ -73,8 +73,8 @@ function Footer() {
           <Grid container>
             <Grid item sm={6} xs={12}>
               <Typography variant="caption" component="p" color="textPrimary">
-                Impressum | Datenschutzerklärung Copyright © Dieartwert 2020.
-                All Rights Reserved
+                SURE.lab Copyright © Surelab-publishers 2020. All Rights
+                Reserved
               </Typography>
             </Grid>
             <Grid item sm={6} xs={12} className={classes.flex}>
