@@ -5,7 +5,9 @@ import {
   Grid,
   Button,
   Container,
+  useMediaQuery,
 } from "@material-ui/core";
+import { useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -27,18 +29,26 @@ const useStyles = makeStyles((theme) => ({
   imgWidth: {
     width: "100%",
   },
-  padding: {
-    paddingRight: "25px",
+  paddingRight: {
+    paddingRight: "40px",
+  },
+  paddingLeft: {
+    paddingLeft: "40px",
+  },
+  center: {
+    textAlign: "center",
   },
 }));
 
 function AboutUs() {
   const classes = useStyles();
+  const theme = useTheme();
+  const mobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <Box id="aboutUs" position="relative" className={classes.container}>
       <Container className={classes.wrapper}>
-        <Box width="100%" textAlign="center" marginBottom="60px">
+        <Box width="100%" textAlign="center" mb={7}>
           <Box>
             <Typography color="primary" variant="h6" component="span">
               O NÁS
@@ -58,14 +68,24 @@ function AboutUs() {
           alignItems="center"
           className={classes.marginBottom90}
         >
-          <Grid item md={6} sm={12} className={classes.padding}>
+          <Grid
+            item
+            md={6}
+            xs={12}
+            className={mobile ? classes.marginBottom : classes.paddingRight}
+          >
             <img
               className={classes.imgWidth}
               src="./images/zhang-kenny.png"
               alt="zhang"
             />
           </Grid>
-          <Grid item md={6} sm={12}>
+          <Grid
+            item
+            md={6}
+            xs={12}
+            className={mobile ? classes.center : classes.paddingLeft}
+          >
             <Typography component="p" className={classes.marginBottom}>
               Znáš to: skládáš hudbu, posíláš songy do médií a na streamovací
               servery, hraješ na koncertech.{" "}
@@ -102,20 +122,6 @@ function AboutUs() {
         >
           <Button variant="outlinedSecondary" color="secondary">
             NEZÁVAZNĚ KONTAKTOVAT
-          </Button>
-          <Box
-            spacing={0}
-            direction="row"
-            alignItems="center"
-            display="flex"
-            justify="​center"
-          >
-            <Typography variant="body2" component="p">
-              nebo
-            </Typography>
-          </Box>
-          <Button variant="contained" color="primary">
-            REGISTROVAT SE
           </Button>
         </Box>
       </Container>

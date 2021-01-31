@@ -58,25 +58,15 @@ const MobileMenu = ({ onClose }) => {
           </Typography>
         </Box>
         <Box mt={5} display="flex" justifyContent="center">
-          <Typography
-            className={`${classes.linkText} ${classes.link}`}
-            align="center"
+          <Button
+            variant="outlined"
+            className={classes.bold}
             onClick={() => {
               onClose();
               setOpen(true);
             }}
           >
             KONTAKT
-          </Typography>
-        </Box>
-        <Box mt={5} display="flex" justifyContent="center">
-          <Button variant="contained" className={classes.bold}>
-            PRIHLÁSIT SE
-          </Button>
-        </Box>
-        <Box mt={5} display="flex" justifyContent="center">
-          <Button variant="outlined" className={classes.bold}>
-            REGISTROVAT
           </Button>
         </Box>
       </Box>

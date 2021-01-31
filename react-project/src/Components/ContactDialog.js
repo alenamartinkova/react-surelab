@@ -164,7 +164,7 @@ const ContactDialog = ({}) => {
                   <Grid
                     item
                     xs={12}
-                    sm={6}
+                    md={6}
                     className={`${mobile ? "" : classes.rightSpace} ${
                       classes.spaceBottom
                     }`}
@@ -190,7 +190,7 @@ const ContactDialog = ({}) => {
                   <Grid
                     item
                     xs={12}
-                    sm={6}
+                    md={6}
                     className={`${mobile ? "" : classes.leftSpace} ${
                       classes.spaceBottom
                     }`}

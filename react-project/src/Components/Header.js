@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Header() {
   const theme = useTheme();
-  const mobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const mobile = useMediaQuery(theme.breakpoints.down("xs"));
   const classes = useStyles();
   const { setOpen } = useContactContext();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -85,7 +85,7 @@ function Header() {
                 </Box>
               ) : (
                 <Box display="flex" justifyContent="flex-end" height="100%">
-                  <Box display="flex" alignItems="center" mr={3}>
+                  <Box display="flex" alignItems="center">
                     <a href="/#aboutUs" className={classes.linkText}>
                       <Typography
                         color="textPrimary"
@@ -105,22 +105,11 @@ function Header() {
                         JAK TO FUNGUJE
                       </Typography>
                     </Link>
-                    <Typography
-                      variant="body1"
-                      component="span"
-                      onClick={() => setOpen(true)}
-                      className={classes.linkText}
-                    >
+                  </Box>
+                  <Box mr={1}>
+                    <Button variant="outlined" onClick={() => setOpen(true)}>
                       KONTAKT
-                    </Typography>
-                  </Box>
-                  <Box mr={1}>
-                    <Button variant="contained" color="primary">
-                      PŘIHLÁSIT SE
                     </Button>
-                  </Box>
-                  <Box mr={1}>
-                    <Button variant="outlined">REGISTROVAT</Button>
                   </Box>
                 </Box>
               )}
