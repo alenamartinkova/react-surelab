@@ -1,4 +1,11 @@
-import { Box, makeStyles, Typography, Container } from "@material-ui/core";
+import {
+  Box,
+  makeStyles,
+  Typography,
+  Container,
+  useMediaQuery,
+} from "@material-ui/core";
+import { useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   preview1: {
@@ -11,10 +18,15 @@ const useStyles = makeStyles((theme) => ({
   flex: {
     display: "flex",
   },
+  fontSize: {
+    fontSize: "18px",
+  },
 }));
 
 function PartnersPreview() {
   const classes = useStyles();
+  const theme = useTheme();
+  const mobile = useMediaQuery(theme.breakpoints.down("xs"));
 
   return (
     <Box height="50vh">
@@ -26,6 +38,7 @@ function PartnersPreview() {
               color="textPrimary"
               variant="h5"
               component="p"
+              className={mobile ? classes.fontSize : undefined}
             >
               BUDEME TVÍ PARTNEŘI.
             </Typography>
@@ -34,6 +47,7 @@ function PartnersPreview() {
               color="textPrimary"
               variant="h5"
               component="p"
+              className={mobile ? classes.fontSize : undefined}
             >
               HREJ, ZPÍVEJ, MY SE POSTARÁME O TVOJE AUTORSKÁ PRÁVA A VEŠKEROU
               ADMINISTRATIVU, A TÍM I O VYŠŠÍ VÝDELKY PRO TEBE.

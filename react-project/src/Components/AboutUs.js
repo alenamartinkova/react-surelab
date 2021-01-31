@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     padding: "95px",
   },
+  wrapperMobile: {
+    padding: "40px",
+  },
   maxWidth: {
     maxWidth: "690px",
     margin: "0 auto",
@@ -47,7 +50,7 @@ function AboutUs() {
 
   return (
     <Box id="aboutUs" position="relative" className={classes.container}>
-      <Container className={classes.wrapper}>
+      <Container className={mobile ? classes.wrapperMobile : classes.wrapper}>
         <Box width="100%" textAlign="center" mb={7}>
           <Box>
             <Typography color="primary" variant="h6" component="span">

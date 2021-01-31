@@ -4,7 +4,9 @@ import {
   Typography,
   Container,
   Grid,
+  useMediaQuery,
 } from "@material-ui/core";
+import { useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -12,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
   },
   wrapper: {
     padding: "30px 95px 30px 95px",
+  },
+  wrapperMobile: {
+    padding: "30px 40px 30px 40px",
   },
   hr: {
     margin: "20px 0",
@@ -30,11 +35,13 @@ const useStyles = makeStyles((theme) => ({
 
 function Footer() {
   const classes = useStyles();
+  const theme = useTheme();
+  const mobile = useMediaQuery(theme.breakpoints.down("xs"));
 
   return (
     <>
       <Box width="100%" className={classes.container}>
-        <Container className={classes.wrapper}>
+        <Container className={mobile ? classes.wrapperMobile : classes.wrapper}>
           <Grid container>
             <Grid item sm={6} xs={12}>
               <Box display="inline-block" marginRight="30px">

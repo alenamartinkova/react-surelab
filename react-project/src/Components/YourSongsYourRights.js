@@ -2,9 +2,10 @@ import {
   Box,
   makeStyles,
   Typography,
-  Grid,
+  useMediaQuery,
   Container,
 } from "@material-ui/core";
+import { useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -13,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
   },
   wrapper: {
     padding: "66px",
+  },
+  wrapperMobile: {
+    padding: "40px",
   },
   maxWidth: {
     maxWidth: "690px",
@@ -26,11 +30,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function YourSongsYourRights() {
+  const theme = useTheme();
   const classes = useStyles();
+  const mobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <Box className={classes.container}>
-      <Container className={classes.wrapper}>
+      <Container className={mobile ? classes.wrapperMobile : classes.wrapper}>
         <Box display="flex" overflow="scroll">
           <Box className={classes.imageBox}>
             <img src="./images/singer-1.png" alt="singer-1" />

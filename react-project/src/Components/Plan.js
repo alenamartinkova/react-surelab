@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     padding: "66px",
   },
+  wrapperMobile: {
+    padding: "40px",
+  },
   maxWidth: {
     maxWidth: "690px",
     margin: "30px auto",
@@ -63,7 +66,7 @@ function Plan() {
 
   return (
     <Box className={classes.container}>
-      <Container className={classes.wrapper}>
+      <Container className={mobile ? classes.wrapperMobile : classes.wrapper}>
         <Box className={classes.maxWidth}>
           <Typography variant="body1" component="p">
             Jsou za tebou desítky koncertů, nebo tě teprve čekají? Hrají se
@@ -131,6 +134,14 @@ function Plan() {
                 <Typography variant="h5" component="h5">
                   Promluvíme si spolu
                 </Typography>
+                {mobile ? (
+                  <Box
+                    height={3}
+                    width={55}
+                    bgcolor="secondary.main"
+                    margin="0 auto 10px"
+                  />
+                ) : undefined}
                 <Typography variant="body1" component="p">
                   Nejprve se potkáme, abychom ti vysvětlili, jak to celé
                   funguje. Seznámíme se, povíme si, co od sebe očekáváme, a
@@ -147,6 +158,14 @@ function Plan() {
                 <Typography variant="h5" component="h5">
                   Promluvíme si spolu
                 </Typography>
+                {mobile ? (
+                  <Box
+                    height={3}
+                    width={55}
+                    bgcolor="secondary.main"
+                    margin="0 auto 10px"
+                  />
+                ) : undefined}
                 <Typography variant="body1" component="p">
                   Následně začneme sledovat a zapisovat každou tvou hudební
                   aktivitu.
@@ -162,6 +181,14 @@ function Plan() {
                 <Typography variant="h5" component="h5">
                   Plusové čísla
                 </Typography>
+                {mobile ? (
+                  <Box
+                    height={3}
+                    width={55}
+                    bgcolor="secondary.main"
+                    margin="0 auto 10px"
+                  />
+                ) : undefined}
                 <Typography variant="body1" component="p">
                   Díky tomu ti každým rokem zajistíme peníze, které ti dosud
                   unikaly. Možná ani nevíš, že na ně máš právo.

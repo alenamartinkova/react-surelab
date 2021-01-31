@@ -4,8 +4,9 @@ import {
   Typography,
   Container,
   Grid,
+  useMediaQuery,
 } from "@material-ui/core";
-import { findAllByDisplayValue } from "@testing-library/react";
+import { useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -14,6 +15,9 @@ const useStyles = makeStyles((theme) => ({
   },
   wrapper: {
     padding: "95px",
+  },
+  wrapperMobile: {
+    padding: "40px",
   },
   absoluteImg: {
     position: "absolute",
@@ -48,15 +52,30 @@ const useStyles = makeStyles((theme) => ({
   marginBottom: {
     marginBottom: "90px",
   },
+  padding: {
+    padding: "0 55px 0 0",
+  },
+  center: {
+    textAlign: "center",
+  },
+  flexReverse: {
+    flexDirection: "column-reverse",
+  },
+  width: {
+    width: "100%",
+  },
 }));
 
 function Differences() {
+  const theme = useTheme();
+  const mobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const mobileXS = useMediaQuery(theme.breakpoints.down("xs"));
   const classes = useStyles();
 
   return (
     <Box position="relative" className={classes.container}>
-      <Container className={classes.wrapper}>
-        <Box width="100%" textAlign="center" marginBottom="60px">
+      <Container className={mobile ? classes.wrapperMobile : classes.wrapper}>
+        <Box width="100%" textAlign="center" mb={mobile ? 4 : 7}>
           <Box>
             <Typography color="primary" variant="h6" component="span">
               ROZDÍLY
@@ -68,9 +87,15 @@ function Differences() {
             </Typography>
           </Box>
         </Box>
-        <Grid container className={classes.marginBottom}>
-          <Grid item sm={12} md={6} className={classes.textGrid}>
-            <Box padding="0 55px 0 0">
+        <Grid
+          container
+          className={mobile ? classes.center : classes.marginBottom}
+        >
+          <Grid item xs={12} md={6} className={classes.textGrid}>
+            <Box
+              className={!mobile ? classes.padding : undefined}
+              mb={mobile ? 4 : 0}
+            >
               <Typography color="textSecondary" variant="h5" component="h5">
                 SMLOUVY BEZ ZÁVAZKŮ
               </Typography>
@@ -81,7 +106,10 @@ function Differences() {
               </Typography>
             </Box>
 
-            <Box padding="0 55px 0 0">
+            <Box
+              className={!mobile ? classes.padding : undefined}
+              mb={mobile ? 4 : 0}
+            >
               <Typography color="textSecondary" variant="h5" component="h5">
                 TRANSPARENTNÍ JEDNÁNÍ
               </Typography>
@@ -92,34 +120,60 @@ function Differences() {
               </Typography>
             </Box>
           </Grid>
-          <Grid item sm={12} md={6} className={classes.imageGrid}>
+          <Grid item xs={12} md={6} className={classes.imageGrid}>
+            {!mobile ? (
+              <img
+                className={classes.absoluteImg}
+                src="./images/differences-first.png"
+                alt="singer"
+              />
+            ) : undefined}
             <img
-              className={classes.absoluteImg}
-              src="./images/differences-first.png"
-              alt="singer"
-            />
-            <img
-              className={classes.relativeImg}
+              className={
+                !mobile
+                  ? classes.relativeImg
+                  : mobileXS
+                  ? classes.width
+                  : undefined
+              }
               src="./images/differences-second.png"
               alt="drums"
             />
           </Grid>
         </Grid>
-        <Grid container>
-          <Grid item sm={12} md={6} className={classes.imageGrid}>
+        <Grid
+          container
+          className={`${
+            mobile ? `${classes.center} ${classes.flexReverse}` : undefined
+          }`}
+        >
+          <Grid item xs={12} md={6} className={classes.imageGrid}>
+            {!mobile ? (
+              <img
+                className={classes.absoluteImgLeft}
+                src="./images/differences-third.png"
+                alt="singer"
+              />
+            ) : undefined}
             <img
-              className={classes.absoluteImgLeft}
-              src="./images/differences-third.png"
-              alt="singer"
-            />
-            <img
-              className={classes.relativeImgLeft}
+              className={
+                !mobile
+                  ? classes.relativeImgLeft
+                  : mobileXS
+                  ? classes.width
+                  : undefined
+              }
               src="./images/differences-fourth.png"
               alt="drums"
             />
           </Grid>
-          <Grid item sm={12} md={6} className={classes.textGridRight}>
-            <Box>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            className={!mobile ? classes.textGridRight : undefined}
+          >
+            <Box mb={mobile ? 4 : 0} mt={mobile ? 4 : 0}>
               <Typography color="textSecondary" variant="h5" component="h5">
                 MODERNÍ PŘÍSTUP
               </Typography>
@@ -130,7 +184,7 @@ function Differences() {
               </Typography>
             </Box>
 
-            <Box>
+            <Box mb={mobile ? 4 : 0}>
               <Typography color="textSecondary" variant="h5" component="h5">
                 UNIKÁTNÍ TECHNOLOGIE
               </Typography>
