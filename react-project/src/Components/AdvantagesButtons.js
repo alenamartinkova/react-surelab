@@ -66,7 +66,7 @@ function AdvantagesButtons() {
               variant="contained"
               className={mobile ? classes.buttonMobile : classes.button}
             >
-              Postaráme se o administrativu
+              Postaráme se o&nbsp;administrativu
             </Button>
             <Button
               variant="contained"

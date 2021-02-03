@@ -53,9 +53,10 @@ function YourSongsYourRights() {
         </Box>
         <Box className={classes.maxWidth}>
           <Typography variant="body1" component="p">
-            Jsme tady, abychom ti dali naději, že s námi se můžeš věnovat své
-            tvorbě naplno. Postaráme se o administrativu, a tak ti zajistíme
-            více peněz z koncertů i dalších hudebních aktivit.
+            Jsme tady, abychom ti dali naději, že s&nbsp;námi se můžeš věnovat
+            své tvorbě naplno. Postaráme se o&nbsp;administrativu, a&nbsp;tak ti
+            zajistíme více peněz z&nbsp;koncertů&nbsp;i&nbsp;dalších hudebních
+            aktivit.
           </Typography>
         </Box>
       </Container>

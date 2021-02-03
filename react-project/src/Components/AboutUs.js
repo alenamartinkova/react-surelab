@@ -59,8 +59,9 @@ function AboutUs() {
           </Box>
           <Box className={classes.maxWidth}>
             <Typography variant="h5" component="span">
-              Jako hudební nakladatelství pomáháme hudebníkům žít si své sny a
-              zároveň získat výdělky, které jim za jejich tvorbu právem náleží.
+              Jako hudební nakladatelství pomáháme hudebníkům žít si své
+              sny&nbsp;a&nbsp;zároveň získat výdělky, které jim za&nbsp;jejich
+              tvorbu právem náleží.
             </Typography>
           </Box>
         </Box>
@@ -90,21 +91,22 @@ function AboutUs() {
             className={mobile ? classes.center : classes.paddingLeft}
           >
             <Typography component="p" className={classes.marginBottom}>
-              Znáš to: skládáš hudbu, posíláš songy do médií a na streamovací
-              servery, hraješ na koncertech.{" "}
+              Znáš to: skládáš hudbu, posíláš songy do&nbsp;médií
+              a&nbsp;na&nbsp;streamovací servery, hraješ na&nbsp;koncertech.{" "}
               <Typography component="span" className={classes.bold}>
                 Je to tvůj svět.
               </Typography>{" "}
-              Děje se v něm toho ale hodně. Víš třeba, že vedle honoráře máš z
-              každého vystoupení nárok na další odměnu? Zvládneš ohlídat, kdy a
-              kde hrála v rádiu tvoje písnička?
+              Děje se v&nbsp;něm toho ale hodně. Víš třeba, že vedle honoráře
+              máš z&nbsp;každého vystoupení nárok na&nbsp;další odměnu? Zvládneš
+              ohlídat, kdy&nbsp;a&nbsp;kde hrála v&nbsp;rádiu tvoje písnička?
             </Typography>
 
             <Typography component="span" className={classes.bold}>
-              Jsme tu pro tebe a pomůžeme ti. Přineseme ti kontrolu nad tím, kde
-              se objevila tvoje hudba, a zajistíme ti peníze, které ti z
-              muzikantských aktivit plynou. Ty se tak můžeš věnovat tomu, co
-              miluješ. Skládej, hrej, o zbytek se postaráme my.
+              Jsme tu pro tebe&nbsp;a&nbsp;pomůžeme ti. Přineseme ti kontrolu
+              nad tím, kde se objevila tvoje hudba, a&nbsp;zajistíme ti peníze,
+              které ti z&nbsp;muzikantských aktivit plynou. Ty se tak můžeš
+              věnovat tomu, co miluješ. Skládej, hrej, o&nbsp;zbytek se
+              postaráme my.
             </Typography>
           </Grid>
         </Grid>
@@ -114,8 +116,8 @@ function AboutUs() {
             component="p"
             className={classes.marginBottom}
           >
-            Můžeme být blízcí partněři, nebo jen pomocná ruka na Tvé kariérní
-            cestě.
+            Můžeme být blízcí partněři, nebo jen pomocná ruka na&nbsp;Tvé
+            kariérní cestě.
           </Typography>
         </Box>
         <Box

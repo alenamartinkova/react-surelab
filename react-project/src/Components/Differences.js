@@ -100,9 +100,9 @@ function Differences() {
                 SMLOUVY BEZ ZÁVAZKŮ
               </Typography>
               <Typography variant="body1" component="p">
-                Smlouva mezi námi a tebou je svobodná jako umění samo. Můžeš ji
-                kdykoli vypovědět, a spolupráci s námi tak jednoduše ukončit.
-                Ale na rovinu ‒ není proč.
+                Smlouva mezi námi&nbsp;a&nbsp;tebou je svobodná jako umění samo.
+                Můžeš ji kdykoli vypovědět, a&nbsp;spolupráci s&nbsp;námi tak
+                jednoduše ukončit. Ale na&nbsp;rovinu ‒ není proč.
               </Typography>
             </Box>
 
@@ -114,9 +114,9 @@ function Differences() {
                 TRANSPARENTNÍ JEDNÁNÍ
               </Typography>
               <Typography variant="body1" component="p">
-                Spolupráce s námi je bez rizika – o nic zkrátka nepřijdeš. Kromě
-                důvěry po tobě nic nechceme. Žádné paušální poplatky, žádné
-                zbytečné papírování. Jen poctivá práce.
+                Spolupráce s&nbsp;námi je bez rizika – o&nbsp;nic zkrátka
+                nepřijdeš. Kromě důvěry po tobě nic nechceme. Žádné paušální
+                poplatky, žádné zbytečné papírování. Jen poctivá práce.
               </Typography>
             </Box>
           </Grid>
@@ -178,9 +178,9 @@ function Differences() {
                 MODERNÍ PŘÍSTUP
               </Typography>
               <Typography variant="body1" component="p">
-                Na rozdíl od „starých“ agentur neustále hledáme neotřelá řešení
-                a sledujeme světové trendy. Takže nové cesty, jak k tobě dostat
-                peníze, najdeme dřív než ony.
+                Na rozdíl od „starých“ agentur neustále hledáme neotřelá
+                řešení&nbsp;a&nbsp;sledujeme světové trendy. Takže nové cesty,
+                jak k&nbsp;tobě dostat peníze, najdeme dřív než ony.
               </Typography>
             </Box>
 
@@ -189,9 +189,10 @@ function Differences() {
                 UNIKÁTNÍ TECHNOLOGIE
               </Typography>
               <Typography variant="body1" component="p">
-                Vyvinuli jsme vlastní software, který hlídá, kdy a kde se která
-                skladba hrála, víme o každém přehrátí v rádiu, na netu, i o
-                špatně odměněném koncertu.
+                Vyvinuli jsme vlastní software, který hlídá, kdy&nbsp;a&nbsp;kde
+                se která skladba hrála, víme o&nbsp;každém přehrátí
+                v&nbsp;rádiu, na&nbsp;netu, i&nbsp;o&nbsp;špatně odměněném
+                koncertu.
               </Typography>
             </Box>
           </Grid>

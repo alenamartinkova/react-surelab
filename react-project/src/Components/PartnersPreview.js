@@ -49,8 +49,9 @@ function PartnersPreview() {
               component="p"
               className={mobile ? classes.fontSize : undefined}
             >
-              HREJ, ZPÍVEJ, MY SE POSTARÁME O TVOJE AUTORSKÁ PRÁVA A VEŠKEROU
-              ADMINISTRATIVU, A TÍM I O VYŠŠÍ VÝDELKY PRO TEBE.
+              HREJ, ZPÍVEJ, MY SE POSTARÁME O&nbsp;TVOJE AUTORSKÁ
+              PRÁVA&nbsp;A&nbsp;VEŠKEROU ADMINISTRATIVU, A&nbsp;TÍM I
+              O&nbsp;VYŠŠÍ VÝDELKY PRO TEBE.
             </Typography>
           </Box>
         </Container>

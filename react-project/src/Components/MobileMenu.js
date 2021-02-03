@@ -42,7 +42,7 @@ const MobileMenu = ({ onClose }) => {
             onClick={onClose}
           >
             <Link to="/" className={classes.link}>
-              O NÁS
+              O&nbsp;NÁS
             </Link>
           </Typography>
         </Box>
@@ -53,7 +53,7 @@ const MobileMenu = ({ onClose }) => {
             onClick={onClose}
           >
             <Link to="/jak-to-funguje" className={classes.link}>
-              JAK TO FUNGUJE
+              JAK&nbsp;TO&nbsp;FUNGUJE
             </Link>
           </Typography>
         </Box>

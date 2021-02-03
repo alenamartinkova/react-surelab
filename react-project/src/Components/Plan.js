@@ -70,20 +70,21 @@ function Plan() {
         <Box className={classes.maxWidth}>
           <Typography variant="body1" component="p">
             Jsou za tebou desítky koncertů, nebo tě teprve čekají? Hrají se
-            tvoje songy v rádiích, nebo se chystáš je tam poslat? Věnuješ se
-            popu, rapu, opeře, electru, rocku nebo jazzu?
+            tvoje songy v&nbsp;rádiích, nebo se chystáš je tam poslat? Věnuješ
+            se popu, rapu, opeře, electru, rocku nebo jazzu?
           </Typography>
         </Box>
         <Box className={classes.maxWidth}>
           <Typography variant="h6" component="span">
-            Na tom nezáleží. Máš-li ambice a velké sny, můžeme ti pomoci.
+            Na tom nezáleží. Máš-li ambice&nbsp;a&nbsp;velké sny, můžeme ti
+            pomoci.
           </Typography>
         </Box>
         <Box className={classes.maxWidth}>
           <Typography variant="body1" component="p">
             Pomůžeme ti dostat odpovídající finanční ohodnocení. Budeme tvý
-            parťáci a porosteme s tebou. Ty se můžeš věnovat hudbě naplno, o
-            zbytek se postaráme my.
+            parťáci&nbsp;a&nbsp;porosteme s&nbsp;tebou. Ty se můžeš věnovat
+            hudbě naplno, o&nbsp;zbytek se postaráme my.
           </Typography>
         </Box>
         <Box margin="10px 0">
@@ -144,8 +145,8 @@ function Plan() {
                 ) : undefined}
                 <Typography variant="body1" component="p">
                   Nejprve se potkáme, abychom ti vysvětlili, jak to celé
-                  funguje. Seznámíme se, povíme si, co od sebe očekáváme, a
-                  stanovíme si cíle.
+                  funguje. Seznámíme se, povíme si, co od sebe očekáváme,
+                  a&nbsp;stanovíme si cíle.
                 </Typography>
               </Box>
             </Grid>
@@ -167,7 +168,7 @@ function Plan() {
                   />
                 ) : undefined}
                 <Typography variant="body1" component="p">
-                  Následně začneme sledovat a zapisovat každou tvou hudební
+                  Následně začneme sledovat&nbsp;a&nbsp;zapisovat každou tvou hudební
                   aktivitu.
                 </Typography>
               </Box>

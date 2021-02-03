@@ -93,7 +93,7 @@ function Header() {
                         component="span"
                         className={classes.bold}
                       >
-                        O NÁS
+                        O&nbsp;NÁS
                       </Typography>
                     </a>
                     <Link to="/jak-to-funguje" className={classes.linkText}>
@@ -102,7 +102,7 @@ function Header() {
                         color="textPrimary"
                         component="span"
                       >
-                        JAK TO FUNGUJE
+                        JAK&nbsp;TO&nbsp;FUNGUJE
                       </Typography>
                     </Link>
                   </Box>
