@@ -63,16 +63,23 @@ function Footer() {
             </Grid>
             <Grid item sm={6} xs={12} className={classes.flex}>
               <Box display="flex" justifyContent="flex-end" marginRight="10px">
-                <img
-                  className={classes.img}
-                  src="./images/instagram.png"
-                  alt="instagram"
-                />
-                <img
-                  className={classes.img}
-                  src="./images/facebook.png"
-                  alt="facebook"
-                />
+                <a target="_blank" href="https://www.instagram.com/sure.lab/">
+                  <img
+                    className={classes.img}
+                    src="./images/instagram.png"
+                    alt="instagram"
+                  />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/Surelab-107058860680793"
+                >
+                  <img
+                    className={classes.img}
+                    src="./images/facebook.png"
+                    alt="facebook"
+                  />
+                </a>
               </Box>
             </Grid>
           </Grid>
