@@ -284,7 +284,7 @@ const ContactDialog = ({}) => {
                       </Typography>
 
                       <Typography color="secondary">
-                        {"Marek Pavlík & Lucie Přikrylová"}
+                        {"Marek Pavlík"}
                       </Typography>
                     </Box>
                   </Grid>
@@ -311,11 +311,8 @@ const ContactDialog = ({}) => {
                         <PhoneIcon className={classes.iconColor} />
                         <Typography color="secondary">
                           Tel.:{" "}
-                          <a
-                            href="tel:09568 / 89687-12"
-                            className={classes.link}
-                          >
-                            09568 / 89687-12
+                          <a href="tel:736 163 631" className={classes.link}>
+                            736 163 631
                           </a>
                         </Typography>
                       </Box>

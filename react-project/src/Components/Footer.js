@@ -63,7 +63,7 @@ function Footer() {
                   Ostrava - Nádražní 923/118
                 </Typography>
                 <Typography variant="caption" component="p" color="textPrimary">
-                  702 02
+                  702 00
                 </Typography>
               </Box>
             </Grid>

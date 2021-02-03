@@ -31,10 +31,6 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     height: 45,
     display: "flex",
-  },
-  logoMobile: {
-    height: 45,
-    display: "flex",
     marginLeft: 20,
   },
   bold: {
@@ -58,7 +54,7 @@ function Header() {
               <Link to="/">
                 <img
                   src="./images/logo.png"
-                  className={mobile ? classes.logoMobile : classes.logo}
+                  className={classes.logo}
                   alt="Logo"
                 />
               </Link>

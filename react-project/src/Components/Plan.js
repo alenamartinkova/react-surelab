@@ -83,8 +83,8 @@ function Plan() {
         <Box className={classes.maxWidth}>
           <Typography variant="body1" component="p">
             Pomůžeme ti dostat odpovídající finanční ohodnocení. Budeme tvý
-            parťáci&nbsp;a&nbsp;porosteme s&nbsp;tebou. Ty se můžeš věnovat
-            hudbě naplno, o&nbsp;zbytek se postaráme my.
+            parťáci a&nbsp;porosteme s&nbsp;tebou. Ty se můžeš věnovat hudbě
+            naplno, o&nbsp;zbytek se postaráme my.
           </Typography>
         </Box>
         <Box margin="10px 0">
@@ -168,8 +168,8 @@ function Plan() {
                   />
                 ) : undefined}
                 <Typography variant="body1" component="p">
-                  Následně začneme sledovat&nbsp;a&nbsp;zapisovat každou tvou hudební
-                  aktivitu.
+                  Následně začneme sledovat&nbsp;a&nbsp;zapisovat každou tvou
+                  hudební aktivitu.
                 </Typography>
               </Box>
             </Grid>
