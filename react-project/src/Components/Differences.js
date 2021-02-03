@@ -63,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
   },
   width: {
     width: "100%",
+    maxWidth: "fit-content",
   },
 }));
 

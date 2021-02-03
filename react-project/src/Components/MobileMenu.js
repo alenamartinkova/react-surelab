@@ -41,7 +41,7 @@ const MobileMenu = ({ onClose }) => {
             align="center"
             onClick={onClose}
           >
-            <Link to="/" className={classes.link}>
+            <Link to="/#aboutUs" className={classes.link}>
               O&nbsp;NÁS
             </Link>
           </Typography>

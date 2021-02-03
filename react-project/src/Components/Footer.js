@@ -31,6 +31,10 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     maxWidth: "112px",
   },
+  link: {
+    color: theme.palette.text.primary,
+    textDecoration: "none",
+  },
 }));
 
 function Footer() {
@@ -49,7 +53,9 @@ function Footer() {
                   MEMBER OF SURE.lab GROUP
                 </Typography>
                 <Typography variant="caption" component="p" color="textPrimary">
-                  info@surelab.cz
+                  <a href="mailto:info@surelab.cz" className={classes.link}>
+                    info@surelab.cz
+                  </a>
                 </Typography>
               </Box>
               <Box display="inline-block">
